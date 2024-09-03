@@ -1,7 +1,7 @@
 {%extends "blogger/base.html"%}
 {%block content%}
     {%for x in posts%}
-    <h1>{{x.title}}</h1>
+    <h1 class="text-red-400">{{x.title}}</h1>
     <p>written by {{x.author}} on {{x.date_posted}}</p>
     <p>{{x.content}}</p>
     {%endfor%}
