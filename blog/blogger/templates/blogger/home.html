@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blogger</title>
-</head>
-<body>
-    <h1>Test</h1>
-    <h2>Was</h2>
-    <h3>Succesful</h3>
+{%extends "blogger/base.html"%}
+{%block content%}
     {%for x in posts%}
     <h1>{{x.title}}</h1>
+    <p>written by {{x.author}} on {{x.date_posted}}</p>
+    <p>{{x.content}}</p>
     {%endfor%}
-</body>
-</html>
+{%endblock content%}

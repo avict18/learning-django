@@ -12,7 +12,7 @@ posts = [
     {
             'author': 'John Doe',
             'title': 'Blog Post 2',
-            'content': 'Second blog post content',
+            'content': 'tested well ',
             'date_posted': 'August 28, 2024'
             }
 ]
@@ -22,3 +22,6 @@ def home(request):
         'posts':posts
     }
     return render(request, 'blogger/home.html',context)
+
+def about(request):
+    return render(request, 'blogger/about.html',{'title':'about-page    '})  # render the about.html template
