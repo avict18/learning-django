@@ -13,6 +13,7 @@
 </head>
 <html>
 <body>
+    
     <nav class="flex justify-between mx-auto w-4/6 bg-blue-500 p-5 rounded-md my-3">
         <div>
             <h4 class="font-bold text-lg text-green-50">Django blog</h4>
@@ -23,19 +24,44 @@
                    <a href="">Home</a> 
                 </li>
                 <li class="text-white hover:text-green-400 transition-all duration-100">
-                    <a href="">Home</a> 
+                    <a href="">About</a> 
                  </li>
                  <li class="text-white hover:text-green-400 transition-all duration-100">
-                    <a href="">Home</a> 
+                    <a href="">Profile</a> 
                  </li>
                  <li class="text-white hover:text-green-400 transition-all duration-100">
-                    <a href="">Home</a> 
+                    <a href="">Log out</a> 
                  </li>
             </ul>
         </div>
     </nav>
-<div class="mx-auto w-1/2">
-    {%block content%}{%endblock%}
-</div>
+    <div class="flex">
+        <!-- sidebar.html -->
+        <div>
+            <div class="fixed top-0 left-0 h-screen w-64 bg-gray-200 p-4" id="sidebar">
+                <ul>
+                <li class="mb-4">
+                    <a href="#" class="text-lg font-bold text-gray-600 hover:text-gray-900">Dashboard</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="text-lg font-bold text-gray-600 hover:text-gray-900">Settings</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="text-lg font-bold text-gray-600 hover:text-gray-900">Help</a>
+                </li>
+                </ul>
+            </div>
+            
+            <button class="fixed top-0 left-64 bg-gray-200 p-2" id="toggle-sidebar">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="mx-auto w-1/2">
+            {%block content%}{%endblock%}
+        </div>
+    </div>
+
 </body>
 </html>
