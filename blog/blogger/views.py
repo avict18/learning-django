@@ -6,7 +6,7 @@ posts = [
     {
         'author': 'Corey Schafer',
         'title': 'Blog Post 1',
-        'content': 'First blog post content',
+        'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minus, error optio numquam sequi amet autem iste assumenda necessitatibus alias repellat culpa et quas, tempora eius eveniet ipsam ducimus dolorem?',
         'date_posted': 'August 27, 2024',
         },
     {

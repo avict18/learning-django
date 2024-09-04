@@ -1,10 +1,20 @@
 {%extends "blogger/base.html"%}
 {%block content%}
-    {%for x in posts%}
-    <div class="bg-slate-300">
-        <h1 class="text-red-400 font-bold text-pretty">{{x.title}}</h1>
-        <p>written by {{x.author}} on {{x.date_posted}}</p>
-        <p>{{x.content}}</p>
+    <div class="flex flex-wrap justify-center">
+        {%for x in posts%}
+        <div class="bg-white rounded-lg shadow-md m-2 p-4 w-full">
+            <div class="flex justify-between">
+                <h1 class="text-blue-400 font-bold text-2xl">{{x.title}}</h1>
+                <div>
+                    <p >written by <span class="font-bold">{{x.author}}</span></p>
+                        <p class="text-gray-600 text-sm flex justify-end">on {{x.date_posted}}</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-gray-600 text-base">{{x.content|truncatewords:20}}</p>
+            <a href="#" class="text-blue-500 hover:text-blue-700 text-sm flex justify-end">Read more</a>
+        </div>
+        {%endfor%}
     </div>
-    {%endfor%}
 {%endblock content%}
+
